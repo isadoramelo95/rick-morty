@@ -2,12 +2,14 @@ import { genders } from '@/constants/constants'
 import { GenderProps } from '@/types/type'
 import React from 'react'
 import Filterbtn from '../Filterbtn'
+import styles from '@/components/filter/category/filter.module.css'
+
 
 const Gender = ({ setGender, setPageNumber }: GenderProps) => {
   return (
-    <div className="bg-[#F3F4F6] rounded-lg p-[1rem] flex flex-col gap-[.5rem]">
-      <div className="text-[20px]">Gender</div>
-      <div className="flex flex-col gap-[1rem]">
+    <div className="">
+      <div className="">Gender</div>
+      <div className="">
         {genders.map((items, index) => {
           return (
             <Filterbtn

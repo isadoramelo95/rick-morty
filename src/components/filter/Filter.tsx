@@ -18,9 +18,9 @@ const Filter = ({
     window.location.reload()
   }
   return (
-    <div className="flex flex-col gap-[1rem]">
-      <div className="bg-[#F3F4F6] rounded-lg p-[1rem] flex justify-between items-center sm:flex-col md:flex-row">
-        <div className="text-[28px]">Filters</div>
+    <div className="">
+      <div className="">
+        <div className="">Filters</div>
         <div onClick={clear} className="cursor-pointer">
           Clear Filters
         </div>

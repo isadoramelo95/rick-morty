@@ -8,7 +8,7 @@ import Loading from "@/components/loading";
 import { useEffect, useState } from "react";
 import Search from "@/components/search";
 import Filter from "@/components/filter/Filter";
-import styles from "@/app/styles/characters.module.scss";
+import styles from "@/app/styles/characters.module.css";
 
 const Pagination = dynamic(() => import("@/components/pagination/index"), {
   ssr: false,
@@ -40,7 +40,7 @@ const Characters = () => {
   }, [api]);
   return (
     <main >
-      <div className={styles.main}>
+      <div className={styles.app}>
       {/* <Image
               src="/assets/fondoStart.webp"
               quality={100}
@@ -50,7 +50,7 @@ const Characters = () => {
                 objectFit: 'cover',
               }}
             /> */}
-        <div className={styles.logoRickmorty}>
+        <div className={styles.logoRickMorty}>
           <Link href="/">
             <Image
               src="/assets/logo.png"
@@ -62,7 +62,7 @@ const Characters = () => {
           </Link>
         </div>
         <div className="">
-          <div className="">
+          <div >
             <Search setSearch={setSearch} setPageNumber={setPageNumber} />
             <div className="">
               {info && info.count ? <>{info.count}</> : "0"} Characters

@@ -1,91 +1,79 @@
 import { CardProps } from "@/types/type";
+import styles from "./card.module.css";
 import React from "react";
 
 const Card = ({ results }: CardProps) => {
   let display: string | JSX.Element[];
 
   if (results) {
-    display = results.map(x => {
-      const { id, name, status, species, gender, origin, location, image } = x
+    display = results.map((x) => {
+      const { id, name, status, species, gender, origin, location, image } = x;
 
       return (
-        <div key={id} >
-          <div className="">
-            <div className="">
-              #{id}
-            </div>
-            <div className="">
-              <img
-                className=""
-                src={image}
-                alt=""
-              />
-            </div>
-            <div className="">
-              <div>
-                <div className="">
-                  {name}
+        <div className={styles.character_List}>
+          <div className={styles.card_background}>
+            <div className={styles.character_container}>
+              <div key={id}>
+                <div>
+                  <img className={styles.image_card} src={image} alt="" />
                 </div>
                 <div className="">
-                  <div>{gender}</div>
-                  <div> - </div>
-                  <div>{species}</div>
+                  <div>
+                    <div className={styles.character_name}>{name}</div>
+                    <div className="">
+                      <div>{gender}</div>
+                      <div> - </div>
+                      <div>{species}</div>
+                    </div>
+                  </div>
+                  <div className={styles.character_location}>
+                    <div className="">Last know location:</div>
+                    <div className="">{location?.name}</div>
+                  </div>
+                  <div className="">
+                    <div className="">Origin:</div>
+                    <div className="">{origin?.name}</div>
+                  </div>
                 </div>
               </div>
-              <div className="">
-                <div className="">Last know location:</div>
-                <div className="">
-                  {location?.name}
-                </div>
-              </div>
-              <div className="">
-                <div className="">Origin:</div>
-                <div className="">{origin?.name}</div>
-              </div>
+              {(() => {
+                if (status === "Dead") {
+                  return (
+                    <div className={styles.icon_dead}>
+                      <div>
+                        <div className={styles.status}>{status}</div>
+                      </div>
+                    </div>
+                  );
+                } else if (status === "Alive") {
+                  return (
+                    <div className={styles.status_species}>
+                      <div className={styles.icon_alive}>
+                        <div className={styles.status}>{status}</div>
+                      </div>
+                    </div>
+                  );
+                } else {
+                  return (
+                    <div className={styles.status_species}>
+                      <div className={styles.icon_unknown}>
+                      <div className={styles.status}>{status}</div>
+                    </div>
+                    </div>
+                    
+                  );
+                }
+              })()}
             </div>
           </div>
-
-          {(() => {
-            if (status === 'Dead') {
-              return (
-                <div className="">
-                  <div className="">
-                    <div className="" />
-                    <div className="" />
-                    <div className="">{status}</div>
-                  </div>
-                </div>
-              )
-            } else if (status === 'Alive') {
-              return (
-                <div className="">
-                  <div className="">
-                    <div className="" />
-                    <div className="" />
-                    <div className="">{status}</div>
-                  </div>
-                </div>
-              )
-            } else {
-              return (
-                <div className="">
-                  <div className="">
-                    <div className="" />
-                    <div className="" />
-                    <div className="">{status}</div>
-                  </div>
-                </div>
-              )
-            }
-          })()}
         </div>
-      )
-    })
+      );
+    });
   } else {
-    display = 'No Characters Found :/'
+    display = "No Characters Found :/";
   }
 
-  return <>{display}</>
-}
+  return <>{display}</>;
+};
 
-export default Card
+export default Card;

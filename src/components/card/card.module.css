@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+.character_List {
+  /* padding-top: 10px; */
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 2rem;
+  font-family: "Roboto Condensed", sans-serif;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  cursor: pointer;
+
+  float: left;
+  width: 33.33%;
+  padding: 8px;
+}
+
+.character_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3em;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2em;
+    border: 3px solid #8ce422;
+    border-radius: 0.5em;
+    background: transparent;
+    color: white;
+    text-align: center;
+    box-shadow: inset 0 0 8px #5baeb6;
+}
+
+.character_name {
+  font-size: 1.2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.character_location {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  font-size: 0.8rem;
+}
+
+/* .card_background {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  padding: 1.2em;
+  border: 3px solid #8ce422;
+  border-radius: 0.5em;
+  background: transparent;
+  color: white;
+  text-align: center;
+  box-shadow: inset 0 0 8px #5baeb6;
+  min-height: 300px; /* Altura mínima para os cards */
+
+.image_card {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 0.5em;
+  box-shadow: #5baeb6;
+  transition: 0.3s;
+}
+
+.image_card:hover {
+  transform: translateX(1.5px) translateY(1.5px) scale(1.1) rotate(0deg);
+}
+
+
+/*ajustar essa parte do status */
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  height: 0.75rem;
+  font-size: 10px;
+  right: 50px;
+}
+
+.icon_alive,
+.icon_dead,
+.icon_unknown {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  display: inline-flex;
+  position: relative;
+}
+
+.icon_alive {
+  background: #8ce422;
+  content: "holo";
+}
+
+.icon_dead {
+  background: red;
+  content: "holo";
+}
+
+.icon_unknown {
+  background: grey;
+  content: "holo";
+}
