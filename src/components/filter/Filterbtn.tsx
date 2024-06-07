@@ -21,7 +21,7 @@ const Filterbtn = ({
           }
         `}
       </style>
-      <div className="">
+      <div>
         <input
           className=""
           type="radio"

@@ -6,8 +6,8 @@ import styles from '@/components/filter/category/filter.module.css'
 
 const Status = ({ setStatus, setPageNumber }: StatusProps) => {
   return (
-    <div className="">
-      <div className="">Status</div>
+    <div className={styles.container}>
+      <div className={styles.filter_title}>Status</div>
       <div className="">
         {status.map((item, index) => (
           <Filterbtn

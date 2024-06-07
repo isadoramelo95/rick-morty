@@ -18,13 +18,11 @@ const Filter = ({
     window.location.reload()
   }
   return (
-    <div className="">
-      <div className="">
+    <div className=''>
         <div className="">Filters</div>
-        <div onClick={clear} className="cursor-pointer">
+        <div onClick={clear}>
           Clear Filters
         </div>
-      </div>
       <Status setPageNumber={setPageNumber} setStatus={setStatus} />
       <Species setPageNumber={setPageNumber} setSpecies={setSpecies} />
       <Gender setPageNumber={setPageNumber} setGender={setGender} />
