@@ -7,8 +7,8 @@ import styles from '@/components/filter/category/filter.module.css'
 
 const Gender = ({ setGender, setPageNumber }: GenderProps) => {
   return (
-    <div className="">
-      <div className="">Gender</div>
+    <div className={styles.container}>
+      <div className={styles.filter_title}>Gender</div>
       <div className="">
         {genders.map((items, index) => {
           return (

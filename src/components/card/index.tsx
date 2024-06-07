@@ -10,7 +10,7 @@ const Card = ({ results }: CardProps) => {
       const { id, name, status, species, gender, origin, location, image } = x;
 
       return (
-        <div className={styles.character_List}>
+        <div className={styles.character_list}>
           <div className={styles.card_background}>
             <div className={styles.character_container}>
               <div key={id}>
