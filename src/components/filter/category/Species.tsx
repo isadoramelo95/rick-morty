@@ -2,12 +2,12 @@ import { species } from '@/constants/constants'
 import { SpeciesProps } from '@/types/type'
 import React from 'react'
 import Filterbtn from '../Filterbtn'
-import styles from '@/components/filter/category/filter.module.css'
+import styles from '@/components/filter/filter.module.css'
 
 
 const Species = ({ setSpecies, setPageNumber }: SpeciesProps) => {
   return (
-    <div className={styles.container}>
+    <div>
       <div className={styles.filter_title}>Species</div>
       <div className={styles.option}>
         {species.map((item, index) => {
