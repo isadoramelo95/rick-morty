@@ -10,8 +10,8 @@
 .logoRickmorty {
   display: block;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 44%;
+  left: 68%;
   transform: translate(-50%, -50%);
   height: auto;
 }
@@ -19,16 +19,17 @@
 .characters {
   display: block;
   position: absolute;
-  bottom: 4px;
-  right: 458px;;
-  padding: 10px;
-  width: 200px;
+  bottom: 108px;
+  right: 238px;
+  padding: 3px;
+  width: 218px;
   height: auto;
 }
 
 .episodes {
   display: block;
   position: absolute;
-  top: 20px;
-  left: 103px;
+  top: -30px;
+  left: 158px;
 }
+

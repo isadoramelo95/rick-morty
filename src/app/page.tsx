@@ -7,7 +7,7 @@ export default function Home() {
     <main className={styles.main}>
       <div>
       <Image
-            src="/assets/casarickmorty.jpg"
+            src="/assets/rick-and-morty-garage-lab.jpg"
             quality={100}
             fill
             sizes="100vw"
@@ -19,11 +19,10 @@ export default function Home() {
         <Image
           src="/assets/logo.png"
           alt=""
-          width={600}
-          height={600}
+          width={300}
+          height={300}
           className={styles.logoRickmorty}
         />
-        
         <div>
           <Link href="/characters" >
             <Image 
@@ -38,8 +37,8 @@ export default function Home() {
         <Image 
             src="/assets/rmseason.png"
             alt="Episodes"
-            width={300}
-            height={400}
+            width={400}
+            height={450}
             className={styles.episodes}/>
         </Link>
       </div>

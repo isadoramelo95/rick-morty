@@ -1,12 +1,13 @@
 import Image from 'next/image'
+import styles from './loading.module.css'
 import React from 'react'
 
 const Loading = () => {
   return (
-    <div>
-      <Image src="/assets/200.webp" alt="Loading.." 
-       width={600}
-       height={600}/>
+    <div className={styles.loading}>
+      <Image src="/assets/loader.gif" alt="Loading.." 
+       width={300}
+       height={300}/>
     </div>
   )
 }

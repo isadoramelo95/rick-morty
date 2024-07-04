@@ -1,8 +1,7 @@
 
 'use client'
 import Card from "@/components/card"
-import Footer from "@/components/footer"
-import Loading from "@/components/loading"
+import Loading from "@/components/loading/index"
 import Link from "next/link"
 import Image from 'next/image'
 import { useEffect, useState } from "react"
@@ -38,9 +37,9 @@ const Episodes = () => {
   }, [api])
 
   return (
-    <main className="h-full">
-      <div className="container flex flex-col gap-[1rem]">
-        <div className="h-[200px] relative">
+    <main className="">
+      <div className="">
+        <div className="">
           <Link href="/">
             <Image
             className=""
@@ -52,26 +51,26 @@ const Episodes = () => {
             />
           </Link>
         </div>
-        <div className="flex flex-col gap-[1rem] pb-[2rem]">
-          <div className="bg-[#F3F4F6] rounded-lg p-[1rem] flex flex-col justify-between items-center gap-[1rem] sm:flex-row">
-            <h1 className="text-center">
+        <div className="">
+          <div className="">
+            <h1 className="">
               Episode name :{' '}
-              <span className="text-primary">
+              <span className="">
                 {name === '' ? 'Unknown' : name}
               </span>
             </h1>
-            <h5 className="text-center">
+            <h5 className="">
               Air Date: {air_date === '' ? 'Unknown' : air_date}
             </h5>
-            <div className="flex gap-[1rem]">51 Episodes</div>
+            <div className="">51 Episodes</div>
           </div>
-          <div className="grid gap-[1rem] sm:grid-cols-[.5fr_1.5fr]">
-            <div className="bg-[#F3F4F6] rounded-lg h-fit p-[1rem] flex flex-col gap-[1rem]">
+          <div className=''>
+            <div className="">
               <div>Pick Episodes</div>
               <Option name="Episode" changeID={setID} total={51} />
             </div>
             <div className="flex flex-col gap-[1rem]">
-              <div className="bg-[#F3F4F6] rounded-lg p-[1rem] grid gap-[2rem]">
+              <div className="">
                 {loading ? (
                   <div className="m-auto">
                     <Loading />
@@ -84,7 +83,6 @@ const Episodes = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </main>
   )
 }

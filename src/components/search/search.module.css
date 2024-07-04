@@ -1,0 +1,32 @@
+/* .input_search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 296px;
+    padding: 10px;
+    border: 3.5px solid #8ce422;
+    color: #8ce422;
+    background-color: black;
+    letter-spacing: 3px;
+    line-height: 6px;
+    margin: 0 auto; 
+    transform: translateX(7%);
+  } */
+
+  .input_search {
+    width: 296px;
+    padding: 10px;
+    border: 3.5px solid #8ce422;
+    color: #8ce422;
+    background-color: black;
+    letter-spacing: 3px;
+    line-height: 1;
+  }
+
+  .search_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }

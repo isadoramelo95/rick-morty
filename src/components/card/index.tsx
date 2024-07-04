@@ -1,6 +1,7 @@
 import { CardProps } from "@/types/type";
 import styles from "./card.module.css";
 import React from "react";
+import Image from "next/image";
 
 const Card = ({ results }: CardProps) => {
   let display: string | JSX.Element[];
@@ -10,12 +11,16 @@ const Card = ({ results }: CardProps) => {
       const { id, name, status, species, gender, origin, location, image } = x;
 
       return (
-        <div className={styles.character_list}>
-          <div className={styles.card_background}>
-            <div className={styles.character_container}>
+        <div className={styles.main_container}>
+          <div className={styles.character_container}>
+            <div className={styles.character_list}>
               <div key={id}>
                 <div>
-                  <img className={styles.image_card} src={image} alt="" />
+                  <img
+                    className={styles.image_card}
+                    src={image}
+                    alt=""
+                  />
                 </div>
                 <div className="">
                   <div>
@@ -36,7 +41,7 @@ const Card = ({ results }: CardProps) => {
                   </div>
                 </div>
               </div>
-              {(() => {
+              {/* {(() => {
                 if (status === "Dead") {
                   return (
                     <div className={styles.icon_dead}>
@@ -63,7 +68,7 @@ const Card = ({ results }: CardProps) => {
                     
                   );
                 }
-              })()}
+              })()} */}
             </div>
           </div>
         </div>

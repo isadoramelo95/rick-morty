@@ -3,14 +3,13 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import Card from "@/components/card";
-import Footer from "@/components/footer";
-import Loading from "@/components/loading";
+import Loading from "@/components/loading/index";
 import { useEffect, useState } from "react";
-import Search from "@/components/search";
+import Search from "@/components/search/index";
 import Filter from "@/components/filter/Filter";
 import styles from "@/app/styles/characters.module.css";
 
-const Pagination = dynamic(() => import("@/components/pagination/index"), {
+const Pagination = dynamic(() => import("@/components/pagination"), {
   ssr: false,
 });
 
@@ -41,35 +40,26 @@ const Characters = () => {
   return (
     <main >
       <div className={styles.app}>
-      {/* <Image
-              src="/assets/fondoStart.webp"
-              quality={100}
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: 'cover',
-              }}
-            /> */}
         <div className={styles.logoRickMorty}>
           <Link href="/">
             <Image
               src="/assets/logo.png"
-              width={300}
-              height={300}
-              alt=""
+              width={350}
+              height={100}
+              alt="logo"
               priority
             />
           </Link>
         </div>
-        <div className="">
+        <div className=''>
           <div >
             <Search setSearch={setSearch} setPageNumber={setPageNumber} />
-            <div className="">
+            <div>
               {info && info.count ? <>{info.count}</> : "0"} Characters
             </div>
           </div>
-          <div className="">
-            <div>
+          <div className=''>
+              <div className={styles.filter_container}>
               <Filter
                 setStatus={setStatus}
                 setGender={setGender}
@@ -77,10 +67,8 @@ const Characters = () => {
                 setPageNumber={setPageNumber}
               />
             </div>
-            <div className="">
-              <div className="">
                 {loading ? (
-                  <div className="">
+                  <div>
                     <Loading />
                   </div>
                 ) : (
@@ -93,16 +81,13 @@ const Characters = () => {
                   </div>
                 )}
               </div>
-              <Pagination
+            </div>
+        <Pagination
                 info={info}
                 pageNumber={pageNumber}
                 setPageNumber={setPageNumber}
               />
-            </div>
-          </div>
-        </div>
       </div>
-      <Footer />
     </main>
   );
 };
